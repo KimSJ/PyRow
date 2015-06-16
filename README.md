@@ -50,7 +50,7 @@ Include PyRow in your code with the following line of code:
 
 
 ## RUNNING
-`pyrow.find()` - returns an array of all the ergs currently connected to the computer
+`pyrow.find()` - returns an iterator for all the ergs currently connected to the computer
 
 ---------------------------------------
 
@@ -61,7 +61,7 @@ Include PyRow in your code with the following line of code:
 
 ---------------------------------------
 
-`pyrow.pyrow.getStatus()` - returns status of machine as a number
+`pyrow.pyrow.get_status()` - returns status of machine as a number
   - 0 = 'Error'
   - 1 = 'Ready'
   - 2 = 'Idle'
@@ -75,7 +75,7 @@ Include PyRow in your code with the following line of code:
 
 ---------------------------------------
 
-`pyrow.pyrow.getMonitor(forceplot=False)` - returns data from the monitor in dictionary format, keys listed below with descriptions
+`pyrow.pyrow.get_monitor(forceplot=False)` - returns data from the monitor in dictionary format, keys listed below with descriptions
   - time = Monitor time in seconds
   - distance = Monitor distance in meters
   - spm = Strokes per Minute
@@ -91,14 +91,14 @@ Include PyRow in your code with the following line of code:
 
 ---------------------------------------
 
-`pyrow.pyrow.getForcePlot()` - returns force plot data and stroke state in dictionary format, keys listed below with descriptions
+`pyrow.pyrow.get_force_plot()` - returns force plot data and stroke state in dictionary format, keys listed below with descriptions
   - forceplot = Force Plot Data (array varying in length from 0 to 16)
   - strokestate = Stroke State
   - status = Machine status
 
 ---------------------------------------
 
-`pyrow.pyrow.getWorkout()` - returns data related to the overall workout in dictionary format, keys listed below with descriptions
+`pyrow.pyrow.get_workout()` - returns data related to the overall workout in dictionary format, keys listed below with descriptions
   - userid = User ID
   - type = Workout Type
   - state = Workout State
@@ -108,7 +108,7 @@ Include PyRow in your code with the following line of code:
 
 ---------------------------------------
 
-`pyrow.pyrow.getErg()` - returns non workout related data about the erg in dictionary format, keys listed below with descriptions
+`pyrow.pyrow.get_erg()` - returns non workout related data about the erg in dictionary format, keys listed below with descriptions
   - mfgid = Manufacturing ID
   - cid = CID
   - model = Erg Model
@@ -122,11 +122,11 @@ Include PyRow in your code with the following line of code:
 
 ---------------------------------------
 
-`pyrow.pyrow.setClock()` - sets the clock on the erg equal to the clock on the computer
+`pyrow.pyrow.set_clock()` - sets the clock on the erg equal to the clock on the computer
 
 ---------------------------------------
 
-`pyrow.pyrow.setWorkout()` - if machine is in the ready state function will set the workout and display the start workout screen, allowable parameters are listed below (the current PM SDK does not allow for setting invervaled workouts)
+`pyrow.pyrow.set_workout()` - if machine is in the ready state function will set the workout and display the start workout screen, allowable parameters are listed below (the current PM SDK does not allow for setting invervaled workouts)
 
 **Choose one**
 
